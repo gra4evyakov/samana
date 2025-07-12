@@ -700,7 +700,7 @@ import { Zoom, Navigation, Pagination } from "swiper/modules";
 
 .reviews {
   padding: var(--section-padding) 0;
-  background: white;
+  background: #cce1e2;
   text-align: center;
 }
 
@@ -712,7 +712,6 @@ import { Zoom, Navigation, Pagination } from "swiper/modules";
 
 .reviews-swiper {
   border-radius: 20px;
-  overflow: hidden;
 }
 
 .pricing {
