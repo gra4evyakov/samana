@@ -1,11 +1,25 @@
+<script setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/zoom";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import { Zoom, Navigation, Pagination } from "swiper/modules";
+</script>
+
 <template>
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Поток спокойствия и энергии</h1>
+        <h1>Поток спокойствия и&nbspэнергии</h1>
         <p class="hero-subtitle">
-          Авторская летняя программа Светланы и Дмитрия
+          Авторская летняя программа Светланы&nbspи&nbspДмитрия
         </p>
         <div class="image hero-image" />
 
@@ -265,6 +279,48 @@
     </div>
   </section>
 
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <div class="container">
+      <h2>Отзывы участников</h2>
+      <swiper
+        :style="{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        }"
+        :autoHeight="true"
+        :zoom="true"
+        :navigation="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :modules="[Zoom, Navigation, Pagination]"
+        class="reviews-swiper"
+      >
+        <swiper-slide>
+          <div class="swiper-zoom-container">
+            <img src="/review-1.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="swiper-zoom-container">
+            <img src="/review-2.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="swiper-zoom-container">
+            <img src="/review-3.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="swiper-zoom-container">
+            <img src="/review-4.jpg" />
+          </div>
+        </swiper-slide>
+      </swiper>
+    </div>
+  </section>
+
   <!-- Pricing Section -->
   <section class="pricing" id="pricing">
     <div class="container">
@@ -301,7 +357,7 @@
 
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, #005e5d 0%, #116f6e 100%);
+  background: var(--gradient);
   color: white;
   padding: var(--section-padding) 0;
   text-align: center;
@@ -337,12 +393,12 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
 .hero-subtitle {
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin-bottom: 30px;
   opacity: 0.9;
 }
@@ -444,7 +500,7 @@
 .program h2 {
   text-align: center;
   font-size: 2.5em;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #2d4b4b;
 }
 
@@ -455,7 +511,7 @@
 }
 
 .program-card {
-  background: linear-gradient(135deg, #005e5d 0%, #116f6e 100%);
+  background: var(--gradient);
   color: white;
   padding: 40px;
   border-radius: 20px;
@@ -487,7 +543,7 @@
 .process h2 {
   text-align: center;
   font-size: 2.5em;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #2d4b4b;
 }
 
@@ -499,7 +555,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -563,7 +619,7 @@
 .mentors h2 {
   text-align: center;
   font-size: 2.5em;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #2d4b4b;
 }
 
@@ -578,7 +634,7 @@
 }
 
 .mentor-card {
-  background: linear-gradient(135deg, #005e5d 0%, #116f6e 100%);
+  background: var(--gradient);
   color: white;
   padding: 40px;
   border-radius: 20px;
@@ -609,7 +665,7 @@
 .results h2 {
   text-align: center;
   font-size: 2.5em;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #2d4b4b;
 }
 
@@ -642,6 +698,23 @@
   color: #2d4b4b;
 }
 
+.reviews {
+  padding: var(--section-padding) 0;
+  background: white;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #2d4b4b;
+}
+
+.reviews-swiper {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .pricing {
   padding: var(--section-padding) 0;
   background: white;
@@ -650,12 +723,12 @@
 
 .pricing h2 {
   font-size: 2.5em;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #2d4b4b;
 }
 
 .price-card {
-  background: linear-gradient(135deg, #005e5d 0%, #116f6e 100%);
+  background: var(--gradient);
   color: white;
   padding: 60px;
   border-radius: 20px;
@@ -678,7 +751,7 @@
 
 .cta-section {
   padding: var(--section-padding) 0;
-  background: linear-gradient(135deg, #005e5d 0%, #116f6e 100%);
+  background: var(--gradient);
   color: white;
   text-align: center;
 }

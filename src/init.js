@@ -3,9 +3,9 @@ import { computed } from "vue";
 export function init() {
   const telegram = window.Telegram.WebApp;
 
-  telegram.setBackgroundColor("#020202");
-  telegram.setHeaderColor("#020202");
-  telegram.setBottomBarColor("#020202");
+  telegram.setBackgroundColor("#ffffff");
+  telegram.setHeaderColor("#ffffff");
+  telegram.setBottomBarColor("#ffffff");
 
   telegram.expand();
   telegram.enableClosingConfirmation();
