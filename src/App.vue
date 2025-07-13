@@ -350,7 +350,7 @@ import { Zoom, Navigation, Pagination } from "swiper/modules";
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2024 Медицинский центр САМАНА. Все права защищены.</p>
+      <p>© 2025 Медицинский центр САМАНА. Все права защищены.</p>
     </div>
   </footer>
 </template>
@@ -359,7 +359,7 @@ import { Zoom, Navigation, Pagination } from "swiper/modules";
 .hero {
   background: var(--gradient);
   color: white;
-  padding: var(--section-padding) 0;
+  padding: var(--area-top) 0 var(--section-padding);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -787,7 +787,7 @@ import { Zoom, Navigation, Pagination } from "swiper/modules";
 .footer {
   background: #2d4b4b;
   color: white;
-  padding: 40px 0;
+  padding: 40px 0 var(--area-bottom);
   text-align: center;
 }
 
