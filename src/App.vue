@@ -10,6 +10,9 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Zoom, Navigation, Pagination } from "swiper/modules";
+
+const link =
+  "https://t.me/centrPopovy?text=Добрый%20день!%20Хочу%20присоединиться%20к%20летней%20группе!";
 </script>
 
 <template>
@@ -80,6 +83,9 @@ import { Zoom, Navigation, Pagination } from "swiper/modules";
             <li>
               Нужно мягко, но эффективно пройти летний сезон с поддержкой и
               практиками
+            </li>
+            <li>
+              Сформировать внутреннюю устойчивость перед осенне-зимним периодом.
             </li>
           </ul>
         </div>
@@ -341,9 +347,7 @@ import { Zoom, Navigation, Pagination } from "swiper/modules";
     <div class="container">
       <h2>Готовы начать путь к гармонии?</h2>
       <p>Присоединяйтесь к потоку спокойствия и энергии уже сейчас</p>
-      <a href="https://t.me/aleksandrovamashaa" class="cta-button-white"
-        >Написать администратору</a
-      >
+      <a :href="link" class="cta-button-white"> Написать администратору </a>
     </div>
   </section>
 
