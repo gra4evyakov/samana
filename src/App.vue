@@ -37,7 +37,7 @@ const link =
           </div>
           <div class="hero-info-item">
             <strong>Длительность</strong>
-            <span>3-5 недель</span>
+            <span>5 недель</span>
           </div>
         </div>
 
