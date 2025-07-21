@@ -8,7 +8,6 @@ export function init() {
   telegram.setBottomBarColor("#ffffff");
 
   telegram.expand();
-  telegram.enableClosingConfirmation();
   telegram.disableVerticalSwipes();
 
   const desktopPlatform = ["tdesktop", "macos", "unknown"];
