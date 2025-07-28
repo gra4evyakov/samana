@@ -29,7 +29,7 @@ const link =
         <div class="hero-info">
           <div class="hero-info-item">
             <strong>Старт</strong>
-            <span>25 июля</span>
+            <span>1 августа</span>
           </div>
           <div class="hero-info-item">
             <strong>Формат</strong>
